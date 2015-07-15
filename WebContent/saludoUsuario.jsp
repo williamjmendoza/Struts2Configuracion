@@ -5,9 +5,9 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Saludo</title>
+		<title>SaludoUsuario</title>
 	</head>
 	<body>
-		<h1><s:property value="mensaje" /></h1>
+		<s:property value="mensaje"/>
 	</body>
 </html>

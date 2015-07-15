@@ -14,5 +14,8 @@
 		<action name="saludo" class="com.javatutoriales.struts2.configuracion.actions.SaludoAction">
 			<result>/saludo.jsp</result>
 		</action>
+		<action name="saludoUsuario" class="com.javatutoriales.struts2.configuracion.actions.SaludoUsuarioAction">
+			<result>/saludoUsuario.jsp</result>
+		</action>
 	</package>
 </struts>

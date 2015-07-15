@@ -12,7 +12,7 @@ public class SaludoAction extends ActionSupport
 	private String mensaje;
 
 	@Override
-	public String execute()
+	public String execute() throws Exception
 	{
 		mensaje = "Bienvenido al mundo de Struts 2";
 		

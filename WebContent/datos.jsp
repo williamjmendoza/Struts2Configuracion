@@ -5,9 +5,13 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Saludo</title>
+		<title>Datos</title>
 	</head>
 	<body>
-		<h1><s:property value="mensaje" /></h1>
+		<s:form action="saludoUsuario">
+			<s:textfield label="Nombre" name="nombre" />
+			<s:textfield label="Número de la suerte" name="numero" />
+			<s:submit value="Enviar" />
+		</s:form>
 	</body>
 </html>
