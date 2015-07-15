@@ -11,5 +11,8 @@
 		<action name="index">
 			<result name="success">/index.jsp</result>
 		</action>
+		<action name="saludo" class="com.javatutoriales.struts2.configuracion.actions.SaludoAction">
+			<result>/saludo.jsp</result>
+		</action>
 	</package>
 </struts>
