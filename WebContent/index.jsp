@@ -7,6 +7,6 @@
 		<title>Index</title>
 	</head>
 	<body>
-		Bienvenido a Struts 2
+		<h4>Bienvenido a Struts 2</h4>
 	</body>
 </html>
