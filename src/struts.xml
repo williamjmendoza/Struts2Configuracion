@@ -6,6 +6,7 @@
 <struts>
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
 	
 	<package name="demo-struts" extends="struts-default">
 		<action name="index">
@@ -16,6 +17,15 @@
 		</action>
 		<action name="saludoUsuario" class="com.javatutoriales.struts2.configuracion.actions.SaludoUsuarioAction">
 			<result>/saludoUsuario.jsp</result>
+		</action>
+		<action name="stack" class="com.javatutoriales.struts2.ognl.actions.StackAction">
+			<result>/stack.jsp</result>
+		</action>
+		<action name="datosSession" class="com.javatutoriales.struts2.ognl.actions.DatosSessionAction">
+			<result>/datosSession.jsp</result>
+		</action>
+		<action name="constantes" class="com.javatutoriales.struts2.ognl.actions.ConstantesAction">
+			<result>/constantes.jsp</result>
 		</action>
 	</package>
 </struts>
