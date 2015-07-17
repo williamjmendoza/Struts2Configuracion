@@ -67,5 +67,11 @@
 			<li>${constantes.atributo}</li>
 		</ul>
 		
+		<ul>
+			<li><s:select list="persona.familiares.{? #this.genero == 'masculino'}"></s:select></li>
+			<li><s:select list="persona.familiares.{nombre}"></s:select></li>
+		</ul>
+		
+		
 	</body>
 </html>

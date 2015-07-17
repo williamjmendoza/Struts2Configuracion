@@ -27,5 +27,21 @@
 		<action name="constantes" class="com.javatutoriales.struts2.ognl.actions.ConstantesAction">
 			<result>/constantes.jsp</result>
 		</action>
+		<action name="datosUsuario" class="com.javatutoriales.struts2.formularios.actions.UsuarioAction">
+			<result>/datosUsuario.jsp</result>
+		</action>
+		<action name="datosUsuario" class="com.javatutoriales.struts2.formularios.actions.UsuarioAction">
+			<result>/datosUsuario.jsp</result>
+		</action>
+	</package>
+	<package name="model-driven" extends="struts-default" namespace="/modeldriven">
+		<action name="datosUsuario" class="com.javatutoriales.struts2.formularios.actions.UsuarioActionMD">
+			<result>/modeldriven/datosUsuario.jsp</result>
+		</action>
+	</package>
+	<package name="multidatos" extends="struts-default" namespace="/multidatos">
+		<action name="enviarCorreo" class="com.javatutoriales.struts2.formularios.actions.MultiplesDatosAction">
+			<result>/multidatos/datosEnviados.jsp</result>
+		</action>
 	</package>
 </struts>

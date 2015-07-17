@@ -1,13 +1,13 @@
 package com.javatutoriales.struts2.ognl.modelo;
 
-import java.util.Collection;
+import java.util.List;
 
 public class Persona
 {
 	private String nombre;
 	private String salario;
 	private String genero;
-	private Collection<Persona> familiares;
+	private List<Persona> familiares;
 		
 	public String getNombre() {
 		return nombre;
@@ -27,10 +27,10 @@ public class Persona
 	public void setGenero(String genero){
 		this.genero = genero;
 	}
-	public Collection<Persona> getFamiliares() {
+	public List<Persona> getFamiliares() {
 		return familiares;
 	}
-	public void setFamiliares(Collection<Persona> familiares) {
+	public void setFamiliares(List<Persona> familiares) {
 		this.familiares = familiares;
 	}
 }
