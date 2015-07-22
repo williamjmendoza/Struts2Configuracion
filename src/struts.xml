@@ -50,4 +50,9 @@
 			<result name="input">/validaciones/formulario.jsp</result>
 		</action>
 	</package>
+	<package name="carga" extends="struts-default" namespace="/carga">
+		<action name="cargaArchivo" class="com.javatutoriales.struts2.carga.actions.CargaArchivoAction">
+			<result>/carga/archivoCargado.jsp</result>
+		</action>
+	</package>
 </struts>
