@@ -64,5 +64,17 @@ public class ValidacionDatosAction extends ActionSupport
 	        
 	    return SUCCESS;
 	}
+	@Override
+	public void validate()
+	{
+		if("programador".equals(username))
+		{
+			addFieldError("username", "El username seleccionado ya se encuentra acupado, por favor seleccione otro.");
+		}
 
+		if("programador@gmail.com".equals(email))
+		{
+			addFieldError("email", "El correo electrónico proporcionado ya ha sido registrado anteriormente.");
+		}
+	}
 }
