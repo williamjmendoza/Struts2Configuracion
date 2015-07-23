@@ -2,9 +2,13 @@ package com.javatutoriales.struts2.formularios.actions;
 
 import java.io.File;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.interceptor.ServletRequestAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 
-public class CargaArchivoAction extends ActionSupport
+public class CargaArchivoAction extends ActionSupport implements ServletRequestAware
 {
 
 	/**
@@ -15,6 +19,7 @@ public class CargaArchivoAction extends ActionSupport
 	private File archivo;
 	private String archivoFileName;
 	private String archivoContentType;
+	private HttpServletRequest servletRequest;
 	
 	public void setArchivo(File archivo){
 		this.archivo = archivo;
@@ -46,10 +51,15 @@ public class CargaArchivoAction extends ActionSupport
 	@Override
 	public String execute() throws Exception
 	{
-		File nuevoArchivo = new File("/", archivoFileName);
-		System.out.println(nuevoArchivo.getAbsolutePath());
+		String realPath = servletRequest.getSession().getServletContext().getRealPath("/");
+		
+		File nuevoArchivo = new File(realPath+"images/", archivoFileName);
 		archivo.renameTo(nuevoArchivo);
 		
 		return SUCCESS;
+	}
+	@Override
+	public void setServletRequest(HttpServletRequest servletRequest) {
+		this.servletRequest = servletRequest;
 	}
 }

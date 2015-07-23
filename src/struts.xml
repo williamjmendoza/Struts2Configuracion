@@ -7,6 +7,8 @@
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.configuration.xml.reload" value="true" />
 	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<constant name="struts.multipart.maxSize" value="10485760" />
+	<constant name="struts.custom.i18n.resources" value="struts-mensajes" />
 	
 	<package name="demo-struts" extends="struts-default">
 		<action name="index">
@@ -57,6 +59,11 @@
 	</package>
 	<package name="carga" extends="struts-default" namespace="/carga">
 		<action name="cargaArchivo" class="com.javatutoriales.struts2.formularios.actions.CargaArchivoAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">2097152</param>
+				<param name="allowedTypes">image/png, image/jpg, image/jpeg, image/ico, image/gif</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
 			<result>/carga/archivoCargado.jsp</result>
 			<result name="input">/carga/formulario.jsp</result>
 		</action>
