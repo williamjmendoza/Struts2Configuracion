@@ -68,4 +68,19 @@
 			<result name="input">/carga/formulario.jsp</result>
 		</action>
 	</package>
+	<package name="descarga" extends="struts-default" namespace="/descarga">
+		<action name="muestraArchivo" class="com.javatutoriales.struts2.formularios.actions.MuestraArchivoAction">
+			<result type="stream">
+				<param name="contentType">application/pdf</param>
+			</result>
+		</action>
+		<action name="imagenGenerada" class="com.javatutoriales.struts2.formularios.actions.GeneradorImagenesAction">
+			<result type="stream">
+				<param name="inputName">imagenDinamica</param>
+				<param name="contentType">imagen/png</param>
+				<param name="contentDisposition">inline;filename="${nombreArchivo}"</param>
+				<param name="contentLength">${bytesArchivo}</param>
+			</result>
+		</action>
+	</package>
 </struts>
