@@ -44,4 +44,20 @@
 			<result>/multidatos/datosEnviados.jsp</result>
 		</action>
 	</package>
+	<package name="multiparametros" extends="struts-default" namespace="/multiparametros">
+		<action name="multiparametros" class="com.javatutoriales.struts2.formularios.actions.MultiplesParametrosAction">
+			<result>/multiparametros/parametros.jsp</result>
+		</action>
+	</package>
+	<package name="validaciones" extends="struts-default" namespace="/validaciones">
+		<action name="validacionDatos" class="com.javatutoriales.struts2.validaciones.actions.ValidacionDatosAction">
+			<result>/validaciones/altaExitosa.jsp</result>
+			<result name="input">/validaciones/formulario.jsp</result>
+		</action>
+	</package>
+	<package name="carga" extends="struts-default" namespace="/carga">
+		<action name="cargaArchivo" class="com.javatutoriales.struts2.carga.actions.CargaArchivoAction">
+			<result>/carga/archivoCargado.jsp</result>
+		</action>
+	</package>
 </struts>

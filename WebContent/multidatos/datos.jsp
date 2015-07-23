@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Insert title here</title>
+		<title>Datos Multiples</title>
 	</head>
 	<body>
 		<s:form action="enviarCorreo">
