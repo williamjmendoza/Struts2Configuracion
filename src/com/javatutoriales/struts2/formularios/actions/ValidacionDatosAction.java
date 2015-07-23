@@ -1,4 +1,4 @@
-package com.javatutoriales.struts2.validaciones.actions;
+package com.javatutoriales.struts2.formularios.actions;
 
 import com.opensymphony.xwork2.ActionSupport;
 

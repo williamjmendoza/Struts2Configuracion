@@ -1,4 +1,4 @@
-package com.javatutoriales.struts2.carga.actions;
+package com.javatutoriales.struts2.formularios.actions;
 
 import java.io.File;
 
