@@ -74,6 +74,13 @@
 				<param name="contentType">application/pdf</param>
 			</result>
 		</action>
+		<action name="descargaArchivo" class="com.javatutoriales.struts2.formularios.actions.DescargaArchivoAction">
+			<result type="stream">
+				<param name="contentType">aplication/pdf</param>
+				<param name="contentDisposition">attachment;filename="${nombreArchivo}"</param>
+				<param name="contentLength">${bytesArchivo}</param>
+			</result>
+		</action>
 		<action name="imagenGenerada" class="com.javatutoriales.struts2.formularios.actions.GeneradorImagenesAction">
 			<result type="stream">
 				<param name="inputName">imagenDinamica</param>
